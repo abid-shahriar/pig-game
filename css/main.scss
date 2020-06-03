@@ -1,0 +1,178 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  height: 100vh;
+  background-image: linear-gradient(rgba(153, 63, 63, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include flex-center();
+  flex-direction: column;
+}
+
+.rules {
+  margin-bottom: 2rem;
+  border: 1px black solid;
+  padding: 1rem 3rem;
+  ul {
+    list-style: disc;
+    font-size: 1.6rem;
+  }
+}
+.container {
+  @include flex-center;
+  position: relative;
+  //   border: 1px red solid;
+  box-shadow: 0 0.5rem 4rem rgba($color: #000000, $alpha: 0.5);
+}
+
+.palyer-panel {
+  background: #fff;
+  padding: 8rem 15rem;
+  //   border: 2px red solid;
+  text-align: center;
+}
+
+.player-name {
+  font-size: 5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.player-score {
+  font-size: 10rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  color: red;
+}
+
+.palyer-current-panel {
+  background: rgb(233, 84, 84);
+  color: white;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 15rem;
+
+  .player-current-label {
+    font-size: 2rem;
+    color: black;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .player-current-score {
+    font-size: 3rem;
+    font-weight: 400;
+    color: white;
+    margin-top: 1.5rem;
+  }
+}
+
+button {
+  position: absolute;
+  background: transparent;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  color: #555;
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  transition: color 0.3s, font-size 0.3s;
+
+  &:hover {
+    color: #222;
+    font-size: 2.2rem;
+  }
+}
+
+.btn-new {
+  top: 5rem;
+}
+
+.btn-roll {
+  bottom: 14rem;
+}
+
+.btn-hold {
+  bottom: 9rem;
+}
+
+.dice {
+  position: absolute;
+  height: 10rem;
+  top: 15rem;
+  box-shadow: 0 0.1rem 2rem rgba($color: #000000, $alpha: 0.2);
+  border: 3px red solid;
+}
+
+.active {
+  background-color: #dadada;
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    right: 11rem;
+    top: 10.5rem;
+  }
+}
+
+.winner {
+  .player-name {
+    color: red;
+    transform: scale(1.2);
+    transition: 0.3s;
+  }
+}
+
+.input {
+  @include flex-center();
+  position: absolute;
+  bottom: 4rem;
+  height: 4rem;
+  width: 22rem;
+  border: 2px red solid;
+  text-align: center;
+  font-size: 2rem;
+  transition: 0.3s;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+    border: 2px green solid;
+  }
+}
+
+p {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  font-size: 1.6rem;
+  transform: translateX(-50%);
+}

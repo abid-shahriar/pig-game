@@ -1,0 +1,207 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(153, 63, 63, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/back.jpg);
+  background-image: linear-gradient(rgba(153, 63, 63, 0.4), rgba(0, 0, 0, 0.4)), url(../img/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rules {
+  margin-bottom: 2rem;
+  border: 1px black solid;
+  padding: 1rem 3rem;
+}
+
+.rules ul {
+  list-style: disc;
+  font-size: 1.6rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+.palyer-panel {
+  background: #fff;
+  padding: 8rem 15rem;
+  text-align: center;
+}
+
+.player-name {
+  font-size: 5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.player-score {
+  font-size: 10rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  color: red;
+}
+
+.palyer-current-panel {
+  background: #e95454;
+  color: white;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 15rem;
+}
+
+.palyer-current-panel .player-current-label {
+  font-size: 2rem;
+  color: black;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.palyer-current-panel .player-current-score {
+  font-size: 3rem;
+  font-weight: 400;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+button {
+  position: absolute;
+  background: transparent;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  color: #555;
+  cursor: pointer;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s, font-size 0.3s;
+  transition: color 0.3s, font-size 0.3s;
+}
+
+button:hover {
+  color: #222;
+  font-size: 2.2rem;
+}
+
+.btn-new {
+  top: 5rem;
+}
+
+.btn-roll {
+  bottom: 14rem;
+}
+
+.btn-hold {
+  bottom: 9rem;
+}
+
+.dice {
+  position: absolute;
+  height: 10rem;
+  top: 15rem;
+  -webkit-box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.2);
+  border: 3px red solid;
+}
+
+.active {
+  background-color: #dadada;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  right: 11rem;
+  top: 10.5rem;
+}
+
+.winner .player-name {
+  color: red;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 4rem;
+  height: 4rem;
+  width: 22rem;
+  border: 2px red solid;
+  text-align: center;
+  font-size: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px green solid;
+}
+
+p {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  font-size: 1.6rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+/*# sourceMappingURL=main.css.map */

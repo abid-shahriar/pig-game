@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pig Game</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="wrapper">
+      <div class="rules">
+        <ul>
+          <li>Press "Roll Dice" to start the match.</li>
+          <li>The Default Winning Score is 20.</li>
+          <li>If You roll 1 on the dice then it's next players turn.</li>
+          <li>Press "hold" to add the score to your global score.</li>
+          <li>pressing "hold" means it's next player's turn.</li>
+          <li>press "New Game" to start a new match.</li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="player-0-panel palyer-panel active">
+          <div class="player-name" id="name-0">Player-0</div>
+          <div class="player-score" id="score-0">75</div>
+          <div class="palyer-current-panel">
+            <div class="player-current-label">current</div>
+            <div class="player-current-score" id="current-0">66</div>
+          </div>
+        </div>
+        <div class="player-1-panel palyer-panel">
+          <div class="player-name" id="name-1">Player-1</div>
+          <div class="player-score" id="score-1">20</div>
+          <div class="palyer-current-panel">
+            <div class="player-current-label">current</div>
+            <div class="player-current-score" id="current-1">0</div>
+          </div>
+        </div>
+        <button class="btn-new">&ndash; New Game &ndash;</button>
+        <button class="btn-roll">&ndash; Roll Dice &ndash;</button>
+        <button class="btn-hold">&ndash; Hold &ndash;</button>
+        <input type="number" placeholder="Enter Winning Score" class="input" />
+        <img class="dice" src="img/dice-5.png" alt="dice" />
+      </div>
+
+      <!-- <script src="app.js"></script> -->
+      <script src="app.js"></script>
+    </section>
+  </body>
+</html>
